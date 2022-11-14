@@ -1,0 +1,21 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+.container nav li {
+  margin: 0.5rem;
+}
+.container table, .container tr, .container td, .container th {
+  padding: 0.3rem;
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+img {
+  width: 20rem;
+}
+
+.red {
+  color: red;
+} /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
