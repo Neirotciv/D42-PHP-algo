@@ -1,22 +1,27 @@
 <?php
     $images = [3, 8, 144, 152];
+    $imagesPerLine = 3;
 
     /**
-     * Calculate the number of lines for 3 images per line
-     * @param int $numberOfImages
-     * @return int $numberOfRows
+     * Calculate the number of lines for a given number of elements per line
+     * @param int $numberOfElements
+     * @param int $elementsPerLine
+     * @return int Number of lines
      */
-    function numberOfLines(int $numberOfImages): int {
-        return ceil($numberOfImages / 3);
+    function numberOfLines(int $numberOfElements, int $elementsPerLine): int 
+    {
+        return ceil($numberOfElements / $elementsPerLine);
     }
 
     /**
-     * Calculates the number of images on the last line for 3 images per line.
+     * Calculate the number of elements on the last line for a chosen number of elements per line
      * @param int $numberOfImages
-     * @return int $numberOfRows
+     * @param int $imagesPerLine
+     * @return int The number of elements on the last line
      */
-    function imagesOnLastLine(int $numberOfImages):int {
-        return $numberOfImages % 3 == 0 ? 3 : $numberOfImages % 3;
+    function elementsOnLastLine(int $numberOfElements, int $imagesPerLine):int 
+    {
+        return $numberOfElements % 3 === 0 ? $imagesPerLine : $numberOfElements % $imagesPerLine;
     }
 ?>
 
@@ -44,8 +49,8 @@
             <?php foreach($images as $image): ?>
                 <tr>
                     <td><?= $image; ?></td>
-                    <td><?= numberOfLines($image); ?></td>
-                    <td><?= imagesOnLastLine($image); ?></td>
+                    <td><?= numberOfLines($image, $imagesPerLine); ?></td>
+                    <td><?= elementsOnLastLine($image, $imagesPerLine); ?></td>
                 </tr>
             <?php endforeach ?>
         </table>
