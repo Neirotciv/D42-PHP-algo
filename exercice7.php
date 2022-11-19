@@ -42,7 +42,7 @@ switch($role)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gestion de rôle en php">
+    <meta name="description" content="Gestion de rôle en avec tableau et switch en php">
     <link rel="stylesheet" href="public/css/style.css">
     <div class="container">
         <title>Ex 7 - Gestion des rôles</title>
@@ -50,7 +50,7 @@ switch($role)
         <h1>Exercice 7</h1>
         <p><?= $title ?><p>
 
-        <form action="./exercice7.php">
+        <form action="./exercice7.php" method="get">
             <label for="name">Votre nom</label>
             <input type="text" id="name" name="name">
             <button type="submit">Connexion</button>
